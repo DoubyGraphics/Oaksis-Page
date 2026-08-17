@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — Oaksis</title>
+<meta name="description" content="The studio behind Oaksis and how it works." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          oak: "#173404",
+          moss: "#3B6D11",
+          teal: "#085041",
+          oasis: "#1D9E75",
+          sand: "#EAF3DE",
+          ink: "#2C2C2A",
+        },
+        fontFamily: {
+          display: ["Fraunces", "serif"],
+          body: ["Work Sans", "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background-color: #EAF3DE; color: #2C2C2A; }
+  .focus-ring:focus-visible { outline: 2px solid #1D9E75; outline-offset: 3px; }
+</style>
+</head>
+<body class="font-body">
+
+<!-- ===== NAV ===== -->
+<header class="absolute inset-x-0 top-0 z-20">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+    <a href="index.html" class="font-display text-lg tracking-tight text-sand">Oaksis</a>
+    <nav class="hidden items-center gap-8 font-body text-sm text-sand/80 md:flex">
+      <a href="about.html" class="focus-ring transition hover:text-oasis">About</a>
+      <a href="services.html" class="focus-ring transition hover:text-oasis">Services</a>
+      <a href="pricing.html" class="focus-ring transition hover:text-oasis">Pricing</a>
+      <a href="work.html" class="focus-ring transition hover:text-oasis">Work</a>
+      <a href="start-a-project.html" class="focus-ring rounded-full bg-oasis px-5 py-2 text-oak transition hover:bg-sand">Start a project</a>
+    </nav>
+    <button id="menuBtn" class="focus-ring text-sand md:hidden" aria-label="Toggle menu">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+        <path d="M4 8H22M4 13H22M4 18H22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <nav id="mobileMenu" class="hidden flex-col gap-1 bg-oak px-6 pb-6 font-body text-base text-sand/90 md:hidden">
+    <a href="about.html" class="focus-ring border-b border-sand/10 py-3">About</a>
+    <a href="services.html" class="focus-ring border-b border-sand/10 py-3">Services</a>
+    <a href="pricing.html" class="focus-ring border-b border-sand/10 py-3">Pricing</a>
+    <a href="work.html" class="focus-ring border-b border-sand/10 py-3">Work</a>
+    <a href="start-a-project.html" class="focus-ring mt-4 inline-block w-fit rounded-full bg-oasis px-5 py-2 text-sm text-oak">Start a project</a>
+  </nav>
+</header>
+
+<main class="relative">
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="relative overflow-hidden bg-oak px-6 pb-20 pt-32 text-sand md:pb-24 md:pt-40">
+    <div class="mx-auto max-w-4xl">
+      <p class="mb-5 font-body text-sm uppercase tracking-[0.2em] text-oasis">About Oaksis</p>
+      <h1 class="font-display text-4xl leading-tight text-sand md:text-6xl">Named for two things that shouldn't blend, but do.</h1>
+      <p class="mt-6 max-w-2xl font-body text-lg leading-relaxed text-sand/75">An oak's steadiness. An oasis's adaptability. That tension is the whole brief — for every client, and for the studio itself.</p>
+    </div>
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="absolute bottom-0 left-0 h-20 w-full" aria-hidden="true">
+      <path d="M0,10 C120,10 140,70 260,72 C340,73 360,20 440,18 C540,15 560,90 680,88" fill="none" stroke="#1D9E75" stroke-width="1.75" opacity="0.9"/>
+      <path d="M680,88 C760,86 780,40 860,42 C960,44 980,95 1100,92 C1220,90 1260,30 1440,34" fill="none" stroke="#1D9E75" stroke-width="1.75" opacity="0.78"/>
+    </svg>
+  </section>
+
+  <section class="bg-sand px-6 py-24">
+    <div class="mx-auto max-w-3xl">
+      <p class="font-display text-2xl leading-snug text-ink md:text-3xl">Oaksis is a solo creative studio, built and led by one designer from first sketch to final file.</p>
+      <p class="mt-6 font-body text-lg leading-relaxed text-ink/70">That's deliberate. It means every client works directly with the person doing the work — no account layer, no brief getting reinterpreted three times before it reaches a designer. Just one consistent creative point of view, applied to your brand as carefully as it would be to our own.</p>
+      <p class="mt-6 font-body text-lg leading-relaxed text-ink/70">The studio works across brand identity, motion, social content, and presentation design — for SMEs, corporates, and NGOs who need work that holds together across every format it's asked to show up in.</p>
+    </div>
+  </section>
+
+  <section class="bg-teal px-6 py-24 text-sand">
+    <div class="mx-auto max-w-6xl">
+      <p class="mb-12 font-body text-sm uppercase tracking-[0.2em] text-oasis">How we work</p>
+      <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
+        <div>
+          <h3 class="font-display text-2xl text-sand">Rooted</h3>
+          <p class="mt-3 font-body leading-relaxed text-sand/75">Every project starts from a clear strategic foundation — not a template, not a trend chase.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl text-sand">Adaptive</h3>
+          <p class="mt-3 font-body leading-relaxed text-sand/75">One identity, applied consistently across whatever format the moment calls for.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl text-sand">Direct</h3>
+          <p class="mt-3 font-body leading-relaxed text-sand/75">One creative lead means one consistent point of view, from first sketch to final file — no handoffs, no dilution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDIT ME: replace bracketed placeholders with real bios. To add more
+       team members, copy one "team-card" div below and paste it after the
+       last one — the layout adjusts automatically. -->
+  <section class="bg-sand px-6 py-24">
+    <div class="mx-auto max-w-6xl">
+      <p class="mb-4 font-body text-sm uppercase tracking-[0.2em] text-teal">Who's behind it</p>
+      <h2 class="mb-16 font-display text-4xl leading-tight text-ink md:text-5xl">Meet the team</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+
+        <div class="team-card flex flex-col gap-6 sm:flex-row">
+          <div class="h-32 w-32 flex-shrink-0 rounded-2xl bg-gradient-to-br from-teal to-oak"></div>
+          <div>
+            <h3 class="font-display text-xl text-ink">Doubra</h3>
+            <p class="mb-3 font-body text-xs uppercase tracking-widest text-moss">Founder & Creative Lead</p>
+            <p class="font-body text-sm leading-relaxed text-ink/70">[Add your bio here — background, what you do, what drives your creative approach.]</p>
+          </div>
+        </div>
+
+        <div class="team-card flex flex-col gap-6 sm:flex-row">
+          <div class="h-32 w-32 flex-shrink-0 rounded-2xl bg-gradient-to-br from-teal to-oak"></div>
+          <div>
+            <h3 class="font-display text-xl text-ink">[Team member name]</h3>
+            <p class="mb-3 font-body text-xs uppercase tracking-widest text-moss">[Role]</p>
+            <p class="font-body text-sm leading-relaxed text-ink/70">[Add their bio here.]</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-sand px-6 py-16">
+    <div class="mx-auto max-w-3xl text-center">
+      <a href="work.html" class="focus-ring font-body text-teal underline decoration-oasis underline-offset-4 transition hover:text-oasis">See the work →</a>
+    </div>
+  </section>
+
+  <!-- ===== CTA BAND ===== -->
+  <section class="relative bg-teal px-6 py-24 text-sand">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="absolute -top-1 left-0 h-16 w-full" aria-hidden="true">
+      <path d="M0,60 C120,80 240,40 360,60 C480,80 600,40 720,60 C840,80 960,40 1080,60 C1200,80 1320,40 1440,60" fill="none" stroke="#1D9E75" stroke-width="1.5" opacity="0.55"/>
+    </svg>
+    <div class="mx-auto max-w-6xl text-center">
+      <h2 class="font-display text-3xl leading-tight text-sand md:text-4xl">Ready to build something with roots?</h2>
+      <p class="mx-auto mt-4 max-w-xl font-body text-base text-sand/75">Tell us about your brand and what you need — we'll get back to you with next steps.</p>
+      <a href="start-a-project.html" class="focus-ring mt-8 inline-block rounded-full bg-oasis px-8 py-3 font-body text-sm font-medium text-oak transition hover:bg-sand">Start your project</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-oak px-6 py-10 text-sand/60">
+    <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 border-t border-sand/10 pt-8 font-body text-xs md:flex-row md:items-center">
+      <span>© 2026 Oaksis Studio. All rights reserved.</span>
+      <div class="flex gap-6">
+        <a href="#" class="focus-ring hover:text-oasis">Instagram</a>
+        <a href="#" class="focus-ring hover:text-oasis">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', function () {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+    document.getElementById('mobileMenu').classList.toggle('flex');
+  });
+</script>
+
+</body>
+</html>

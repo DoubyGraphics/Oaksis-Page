@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Start a Project — Oaksis</title>
+<meta name="description" content="Tell us about your brand and what you need." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          oak: "#173404",
+          moss: "#3B6D11",
+          teal: "#085041",
+          oasis: "#1D9E75",
+          sand: "#EAF3DE",
+          ink: "#2C2C2A",
+        },
+        fontFamily: {
+          display: ["Fraunces", "serif"],
+          body: ["Work Sans", "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background-color: #EAF3DE; color: #2C2C2A; }
+  .focus-ring:focus-visible { outline: 2px solid #1D9E75; outline-offset: 3px; }
+</style>
+</head>
+<body class="font-body">
+
+<!-- ===== NAV ===== -->
+<header class="absolute inset-x-0 top-0 z-20">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+    <a href="index.html" class="font-display text-lg tracking-tight text-sand">Oaksis</a>
+    <nav class="hidden items-center gap-8 font-body text-sm text-sand/80 md:flex">
+      <a href="about.html" class="focus-ring transition hover:text-oasis">About</a>
+      <a href="services.html" class="focus-ring transition hover:text-oasis">Services</a>
+      <a href="pricing.html" class="focus-ring transition hover:text-oasis">Pricing</a>
+      <a href="work.html" class="focus-ring transition hover:text-oasis">Work</a>
+      <a href="start-a-project.html" class="focus-ring rounded-full bg-oasis px-5 py-2 text-oak transition hover:bg-sand">Start a project</a>
+    </nav>
+    <button id="menuBtn" class="focus-ring text-sand md:hidden" aria-label="Toggle menu">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+        <path d="M4 8H22M4 13H22M4 18H22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <nav id="mobileMenu" class="hidden flex-col gap-1 bg-oak px-6 pb-6 font-body text-base text-sand/90 md:hidden">
+    <a href="about.html" class="focus-ring border-b border-sand/10 py-3">About</a>
+    <a href="services.html" class="focus-ring border-b border-sand/10 py-3">Services</a>
+    <a href="pricing.html" class="focus-ring border-b border-sand/10 py-3">Pricing</a>
+    <a href="work.html" class="focus-ring border-b border-sand/10 py-3">Work</a>
+    <a href="start-a-project.html" class="focus-ring mt-4 inline-block w-fit rounded-full bg-oasis px-5 py-2 text-sm text-oak">Start a project</a>
+  </nav>
+</header>
+
+<main class="relative">
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="relative overflow-hidden bg-oak px-6 pb-20 pt-32 text-sand md:pb-24 md:pt-40">
+    <div class="mx-auto max-w-4xl">
+      <p class="mb-5 font-body text-sm uppercase tracking-[0.2em] text-oasis">Start a project</p>
+      <h1 class="font-display text-4xl leading-tight text-sand md:text-6xl">Let's build something with roots.</h1>
+      <p class="mt-6 max-w-2xl font-body text-lg leading-relaxed text-sand/75">Fill in a few details below, or reach out directly — either way, a real person reads every message.</p>
+    </div>
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="absolute bottom-0 left-0 h-20 w-full" aria-hidden="true">
+      <path d="M0,10 C120,10 140,70 260,72 C340,73 360,20 440,18 C540,15 560,90 680,88" fill="none" stroke="#1D9E75" stroke-width="1.75" opacity="0.9"/>
+      <path d="M680,88 C760,86 780,40 860,42 C960,44 980,95 1100,92 C1220,90 1260,30 1440,34" fill="none" stroke="#1D9E75" stroke-width="1.75" opacity="0.78"/>
+    </svg>
+  </section>
+
+  <!-- EDIT ME: replace YOUR_FORM_ID below with your real Formspree form ID
+       (sign up free at formspree.io, create a form, copy the ID it gives you). -->
+  <section class="bg-sand px-6 py-24">
+    <div class="mx-auto max-w-4xl">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div class="md:col-span-1">
+          <label for="name" class="mb-2 block font-body text-sm text-ink/70">Your name</label>
+          <input id="name" name="name" type="text" required class="focus-ring w-full rounded-lg border border-ink/15 bg-white/70 px-4 py-3 font-body text-ink" />
+        </div>
+        <div class="md:col-span-1">
+          <label for="email" class="mb-2 block font-body text-sm text-ink/70">Email</label>
+          <input id="email" name="email" type="email" required class="focus-ring w-full rounded-lg border border-ink/15 bg-white/70 px-4 py-3 font-body text-ink" />
+        </div>
+        <div class="md:col-span-1">
+          <label for="tier" class="mb-2 block font-body text-sm text-ink/70">What are you looking for?</label>
+          <select id="tier" name="tier" class="focus-ring w-full rounded-lg border border-ink/15 bg-white/70 px-4 py-3 font-body text-ink">
+            <option>Brand Foundation</option>
+            <option>Applied Creative</option>
+            <option>Ongoing Partnership</option>
+            <option>Not sure — let's talk</option>
+          </select>
+        </div>
+        <div class="md:col-span-1">
+          <label for="budget" class="mb-2 block font-body text-sm text-ink/70">Rough budget</label>
+          <select id="budget" name="budget" class="focus-ring w-full rounded-lg border border-ink/15 bg-white/70 px-4 py-3 font-body text-ink">
+            <option>Not sure yet</option>
+            <option>Under &#8358;300,000</option>
+            <option>&#8358;300,000 – &#8358;800,000</option>
+            <option>&#8358;800,000+</option>
+          </select>
+        </div>
+        <div class="md:col-span-2">
+          <label for="details" class="mb-2 block font-body text-sm text-ink/70">Tell us about your brand and what you need</label>
+          <textarea id="details" name="details" rows="5" required class="focus-ring w-full rounded-lg border border-ink/15 bg-white/70 px-4 py-3 font-body text-ink"></textarea>
+        </div>
+        <div class="md:col-span-2">
+          <button type="submit" class="focus-ring rounded-full bg-oak px-8 py-3 font-body text-sm font-medium text-sand transition hover:bg-teal">Send project details</button>
+        </div>
+      </form>
+
+      <div class="mt-16 rounded-2xl border border-ink/10 bg-white/40 p-8">
+        <p class="font-display text-xl text-ink">Prefer to talk directly?</p>
+        <p class="mt-2 font-body text-ink/70">Email us and we'll pick it up from there.</p>
+        <a href="mailto:hello@oaksisstudio.com" class="focus-ring mt-4 inline-block font-body text-teal underline decoration-oasis underline-offset-4 transition hover:text-oasis">hello@oaksisstudio.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-oak px-6 py-10 text-sand/60">
+    <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 border-t border-sand/10 pt-8 font-body text-xs md:flex-row md:items-center">
+      <span>© 2026 Oaksis Studio. All rights reserved.</span>
+      <div class="flex gap-6">
+        <a href="#" class="focus-ring hover:text-oasis">Instagram</a>
+        <a href="#" class="focus-ring hover:text-oasis">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', function () {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+    document.getElementById('mobileMenu').classList.toggle('flex');
+  });
+</script>
+
+</body>
+</html>

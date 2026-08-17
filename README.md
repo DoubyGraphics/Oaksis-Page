@@ -1,96 +1,86 @@
-# Oaksis — Landing Page
+# Oaksis — Plain HTML Site
 
-Next.js 14 + Tailwind CSS landing page for Oaksis Studio.
+No build step, no Node, no TypeScript. Just HTML files you can open directly
+in a browser and edit like any normal HTML.
 
-## Run it locally
+## View it
 
-```bash
-npm install
-npm run dev
+Just double-click `index.html` — it opens in your browser. No server needed.
+
+Every link between pages (About, Services, Pricing, Work, Start a Project)
+works locally right away.
+
+## Files
+
+```
+index.html            — homepage
+about.html             — about + team bios
+services.html          — in-depth services
+pricing.html           — pricing (has placeholder prices, see below)
+work.html               — portfolio
+start-a-project.html    — onboarding form + contact
+README.md
 ```
 
-Open http://localhost:3000
-
-## Project structure
-
-```
-app/
-  layout.tsx           — fonts (Fraunces + Work Sans) and page metadata
-  page.tsx              — homepage (assembles teaser sections)
-  globals.css           — Tailwind entry + base styles
-  about/page.tsx         — About page
-  services/page.tsx      — in-depth Services page
-  pricing/page.tsx       — Pricing page (placeholder prices — see below)
-  work/page.tsx           — Work/portfolio page
-  start-a-project/page.tsx — onboarding form + direct contact
-components/
-  Nav.tsx           — site-wide header nav w/ mobile menu, links to every page
-  Footer.tsx        — shared footer
-  PageHero.tsx      — reusable compact hero banner used on every secondary page
-  Hero.tsx          — homepage hero
-  Services.tsx      — homepage services teaser (3-tier ladder)
-  About.tsx         — homepage about teaser
-  WorkTeaser.tsx    — homepage work preview grid
-  CtaBand.tsx       — reusable "start a project" CTA band
-  ProjectForm.tsx   — the onboarding form (see Formspree setup below)
-  VeinDivider.tsx   — the signature root→ripple line motif used as section dividers
-tailwind.config.ts  — Oaksis color palette + font tokens
-```
-
-## Set up the project form (Formspree)
-
-The form on `/start-a-project` needs a Formspree endpoint to actually deliver
-submissions to your inbox — it won't send anywhere until you do this:
-
-1. Go to https://formspree.io and create a free account
-2. Create a new form, and copy the form ID it gives you (looks like `xzzpqrst`)
-3. Open `components/ProjectForm.tsx` and replace `YOUR_FORM_ID` in the
-   `action="https://formspree.io/f/YOUR_FORM_ID"` line with your real ID
-4. Submissions will now arrive by email — the free tier covers 50/month
-
-## Add real work images
-
-Once you have final images for the Work page:
-
-1. Add image files to `/public/work/` (create the folder if it doesn't exist)
-2. Open `app/work/page.tsx` — each project's placeholder gradient block has a
-   comment showing exactly how to swap it for a real `next/image` `<Image>`
-   component
+There's no shared file for the nav/footer — each page has its own copy of
+that HTML. That's normal for a plain multi-page site; it just means if you
+ever change the nav (e.g. add a new page link), you'll want to copy that
+change into each file. Use your editor's "Find in Files" / "Find & Replace
+across files" feature to do that quickly across all 6 at once.
 
 ## Editing content
 
-- **Colors**: `tailwind.config.ts` — `oak`, `moss`, `teal`, `oasis`, `sand`, `ink`
-- **Copy**: each page/section's text lives directly in its file — e.g. edit
-  the `tiers` array in `app/services/page.tsx` to change service descriptions
-- **Prices**: `app/pricing/page.tsx` — currently placeholders marked
-  `₦[ADD PRICE]`, replace with your real rates
-- **Contact email**: appears in `app/start-a-project/page.tsx` — swap
-  `hello@oaksisstudio.com`
-- **Social links**: `components/Footer.tsx` — currently placeholder `#` hrefs
+Open any `.html` file in a text editor (VS Code, Notepad++, even Notepad).
+It's regular HTML with Tailwind CSS utility classes (like `class="text-xl
+text-ink"`) for styling — no build step required, styling updates the moment
+you save and refresh the page in your browser.
 
-## Push to GitHub
+- **Colors**: search for `oak`, `moss`, `teal`, `oasis`, `sand`, `ink` — these
+  are custom color names defined once at the top of each file inside the
+  `<script>tailwind.config = {...}</script>` block. To change a color itself
+  (not just where it's used), edit the hex code there.
+- **Team bios**: `about.html` — search for `team-card`, edit the name/role/bio
+  text directly, or copy a whole `team-card` block to add another person
+- **Prices**: `pricing.html` — search for `ADD PRICE`
+- **Contact email**: search for `hello@oaksisstudio.com` in `start-a-project.html`
+- **Social links**: search for `Instagram` / `LinkedIn` near the bottom of
+  each file (footer)
+
+## Set up the project form (Formspree)
+
+The form on `start-a-project.html` needs a Formspree endpoint to actually
+deliver submissions to your inbox:
+
+1. Go to https://formspree.io and create a free account
+2. Create a new form, copy the form ID it gives you (looks like `xzzpqrst`)
+3. Open `start-a-project.html`, find `YOUR_FORM_ID` in the `<form action=...>`
+   line near the top of the form, and replace it with your real ID
+4. Submissions arrive by email — free tier covers 50/month
+
+No JavaScript is needed for the form to work — it's a plain HTML form
+submission.
+
+## Add real work images
+
+Once you have final images:
+
+1. Create a folder called `images` next to these HTML files
+2. Put your image files in there
+3. In `work.html`, find the comment near the top of the work section — it
+   shows exactly what to replace the placeholder gradient block with
+
+## Push to GitHub / deploy to Vercel
+
+Same as before:
 
 ```bash
 git init
 git add .
-git commit -m "Initial Oaksis landing page"
+git commit -m "Convert to plain HTML"
 git branch -M main
 git remote add origin https://github.com/<your-username>/<repo-name>.git
 git push -u origin main
 ```
 
-## Deploy to Vercel
-
-1. Go to https://vercel.com/new
-2. Import the GitHub repo you just pushed
-3. Framework preset should auto-detect as **Next.js** — no config needed
-4. Click **Deploy**
-
-Every future push to `main` will auto-redeploy.
-
-## Notes
-
-- Fonts load from Google Fonts at build time via `next/font/google` — this
-  requires internet access when running `npm run build` or `npm run dev`
-  (works automatically on Vercel and on your local machine).
-- No environment variables are required for this project.
+Then import the repo at vercel.com/new — Vercel auto-detects plain HTML/static
+sites too, no config needed.
