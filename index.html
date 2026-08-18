@@ -41,8 +41,9 @@
 
   <!-- ===== HERO — oversized background word behind the headline ===== -->
   <section class="hero section--dark">
+    <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>
     <div class="hero__bg-word">ROOTED</div>
-    <div class="container hero__content">
+    <div class="container hero__content reveal">
       <span class="eyebrow">Oaksis Studio</span>
       <h1 class="display">Brands with roots deep enough to hold their shape,
         <span class="hero__accent">and water enough to move.</span>
@@ -53,16 +54,21 @@
         <a href="services.html" class="btn btn--outline">See how we work</a>
       </div>
     </div>
+    <p class="hero__side-note">Move your cursor<br>across the water</p>
   </section>
+
+  <div class="container">
+    <svg class="root-divider" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C150 10 300 70 450 40 S750 10 900 40 S1150 70 1200 40"></path></svg>
+  </div>
 
   <!-- ===== SERVICES — numbered editorial list, no cards ===== -->
   <section class="section section--light">
     <div class="container">
-      <span class="eyebrow">How we work</span>
-      <h2 class="display">Three ways to work with Oaksis</h2>
+      <span class="eyebrow reveal">How we work</span>
+      <h2 class="display reveal">Three ways to work with Oaksis</h2>
 
       <div class="numbered-list">
-        <div class="numbered-item">
+        <div class="numbered-item reveal">
           <span class="numbered-item__num">01</span>
           <div class="numbered-item__body">
             <span class="numbered-item__tag">For teams starting fresh</span>
@@ -70,7 +76,7 @@
             <p class="numbered-item__desc">Identity built from the ground up — name positioning, visual system, and the guidelines that keep it consistent as you grow.</p>
           </div>
         </div>
-        <div class="numbered-item">
+        <div class="numbered-item reveal">
           <span class="numbered-item__num">02</span>
           <div class="numbered-item__body">
             <span class="numbered-item__tag">For teams that need to show up</span>
@@ -78,7 +84,7 @@
             <p class="numbered-item__desc">Your identity put to work: social content, motion, presentation design — made to move across every place your brand is seen.</p>
           </div>
         </div>
-        <div class="numbered-item">
+        <div class="numbered-item reveal">
           <span class="numbered-item__num">03</span>
           <div class="numbered-item__body">
             <span class="numbered-item__tag">For teams that need a standing creative hand</span>
@@ -95,16 +101,16 @@
   <!-- ===== WORK ===== -->
   <section class="section section--light">
     <div class="container">
-      <span class="eyebrow">Selected work</span>
-      <h2 class="display">A look at what we make</h2>
+      <span class="eyebrow reveal">Selected work</span>
+      <h2 class="display reveal">A look at what we make</h2>
 
       <div class="work-grid">
-        <a href="work.html" class="work-card">
+        <a href="work.html" class="work-card reveal">
           <div class="work-card__media"><span>Image coming soon</span></div>
           <p class="work-card__tag">Social content + motion</p>
           <h3 class="work-card__title">Fictional brand spec — Set 1</h3>
         </a>
-        <a href="work.html" class="work-card">
+        <a href="work.html" class="work-card reveal">
           <div class="work-card__media"><span>Image coming soon</span></div>
           <p class="work-card__tag">Brand identity</p>
           <h3 class="work-card__title">Fictional brand spec — Set 2</h3>
@@ -116,8 +122,8 @@
   </section>
 
   <!-- ===== ABOUT ===== -->
-  <section class="section section--teal">
-    <div class="container">
+  <section class="section section--teal ring-texture">
+    <div class="container reveal">
       <span class="eyebrow">About Oaksis</span>
       <p class="display" style="font-size:clamp(1.75rem,3.5vw,2.75rem); max-width: 18em;">Oaksis is named for two things that shouldn't blend, but do — an oak's steadiness and an oasis's adaptability.</p>
       <p class="lede mt-lg" style="opacity:0.85;">That's the brief every client gets: work that holds a consistent identity, but bends to whatever format the moment calls for — a deck, a reel, a full rebrand. Built and led by one creative, so every project gets a single, consistent point of view from first sketch to final file.</p>
@@ -126,8 +132,8 @@
   </section>
 
   <!-- ===== CTA ===== -->
-  <section class="section section--dark cta-band">
-    <div class="container">
+  <section class="section section--dark cta-band ring-texture">
+    <div class="container reveal">
       <h2 class="display cta-band__title">Ready to build something with roots?</h2>
       <p class="lede cta-band__lede" style="margin-left:auto;margin-right:auto;">Tell us about your brand and what you need — we'll get back to you with next steps.</p>
       <a href="start-a-project.html" class="btn btn--solid">Start your project</a>

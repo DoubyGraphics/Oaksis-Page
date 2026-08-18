@@ -349,3 +349,73 @@ h3.display { font-size: clamp(1.5rem, 3vw, 2rem); }
 .text-center { text-align: center; }
 .max-w-prose { max-width: 42em; }
 .max-w-prose-lg { max-width: 52em; }
+
+/* ---- Microinteractions ---- */
+
+/* Scroll reveal: fade + rise, triggered by IntersectionObserver in main.js */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Root-line divider: a single hand-drawn line that draws itself in on scroll */
+.root-divider {
+  display: block;
+  width: 100%;
+  height: clamp(40px, 8vw, 70px);
+  overflow: visible;
+  margin: clamp(1rem, 4vw, 2.5rem) 0;
+}
+.root-divider path {
+  fill: none;
+  stroke: var(--oasis);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 1300;
+  stroke-dashoffset: 1300;
+  transition: stroke-dashoffset 1.8s cubic-bezier(0.7, 0, 0.2, 1);
+}
+.root-divider.is-visible path { stroke-dashoffset: 0; }
+.section--dark .root-divider path,
+.section--teal .root-divider path { stroke: var(--sand); opacity: 0.55; }
+
+@media (prefers-reduced-motion: reduce) {
+  .root-divider path { stroke-dashoffset: 0; transition: none; }
+}
+
+/* Ring texture: faint concentric dot pattern for dark/teal sections */
+.ring-texture { position: relative; }
+.ring-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-radial-gradient(circle, rgba(234,243,222,0.05) 0px, rgba(234,243,222,0.05) 1px, transparent 1px, transparent 24px);
+}
+.ring-texture > * { position: relative; z-index: 1; }
+
+/* Hero ripple canvas (homepage only) */
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero__side-note {
+  position: absolute;
+  right: clamp(1.5rem, 4vw, 3rem);
+  bottom: clamp(1.5rem, 4vw, 3rem);
+  z-index: 1;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: right;
+  opacity: 0.5;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 700px) { .hero__side-note { display: none; } }
