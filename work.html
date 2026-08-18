@@ -5,169 +5,108 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Work — Oaksis</title>
 <meta name="description" content="Selected work from Oaksis Studio." />
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          oak: "#173404",
-          moss: "#3B6D11",
-          teal: "#085041",
-          oasis: "#1D9E75",
-          sand: "#EAF3DE",
-          ink: "#2C2C2A",
-        },
-        fontFamily: {
-          display: ["Fraunces", "serif"],
-          body: ["Work Sans", "sans-serif"],
-        },
-      },
-    },
-  };
-</script>
-<style>
-  html { scroll-behavior: smooth; }
-  body { background-color: #EAF3DE; color: #2C2C2A; }
-  .focus-ring:focus-visible { outline: 2px solid #1D9E75; outline-offset: 3px; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="font-body">
+<body>
 
-<!-- ===== NAV ===== -->
-<header class="absolute inset-x-0 top-0 z-20">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-    <a href="index.html" class="font-display text-lg tracking-tight text-sand">Oaksis</a>
-    <nav class="hidden items-center gap-8 font-body text-sm text-sand/80 md:flex">
-      <a href="about.html" class="focus-ring transition hover:text-oasis">About</a>
-      <a href="services.html" class="focus-ring transition hover:text-oasis">Services</a>
-      <a href="pricing.html" class="focus-ring transition hover:text-oasis">Pricing</a>
-      <a href="work.html" class="focus-ring transition hover:text-oasis">Work</a>
-      <a href="start-a-project.html" class="focus-ring rounded-full bg-oasis px-5 py-2 text-oak transition hover:bg-sand">Start a project</a>
+<header class="nav">
+  <div class="nav__bar">
+    <a href="index.html" class="nav__logo">Oaksis</a>
+    <nav class="nav__links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="work.html">Work</a>
+      <a href="start-a-project.html" class="nav__cta">Start a project</a>
     </nav>
-    <button id="menuBtn" class="focus-ring text-sand md:hidden" aria-label="Toggle menu">
+    <button class="nav__toggle" data-nav-toggle aria-expanded="false" aria-label="Toggle menu">
       <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
         <path d="M4 8H22M4 13H22M4 18H22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
       </svg>
     </button>
   </div>
-  <nav id="mobileMenu" class="hidden flex-col gap-1 bg-oak px-6 pb-6 font-body text-base text-sand/90 md:hidden">
-    <a href="about.html" class="focus-ring border-b border-sand/10 py-3">About</a>
-    <a href="services.html" class="focus-ring border-b border-sand/10 py-3">Services</a>
-    <a href="pricing.html" class="focus-ring border-b border-sand/10 py-3">Pricing</a>
-    <a href="work.html" class="focus-ring border-b border-sand/10 py-3">Work</a>
-    <a href="start-a-project.html" class="focus-ring mt-4 inline-block w-fit rounded-full bg-oasis px-5 py-2 text-sm text-oak">Start a project</a>
+  <nav class="nav__mobile" data-nav-mobile>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="work.html">Work</a>
+    <a href="start-a-project.html" class="nav__cta">Start a project</a>
   </nav>
 </header>
 
-<main class="relative">
+<main>
 
-  <!-- ===== PAGE HERO ===== -->
-  <section class="relative overflow-hidden bg-oak px-6 pb-20 pt-32 text-sand md:pb-24 md:pt-40">
-    <div class="mx-auto max-w-4xl">
-      <p class="mb-5 font-body text-sm uppercase tracking-[0.2em] text-oasis">Selected work</p>
-      <h1 class="font-display text-4xl leading-tight text-sand md:text-6xl">A look at what we make</h1>
-      <p class="mt-6 max-w-2xl font-body text-lg leading-relaxed text-sand/75">A mix of finished spec work and space held for projects still in progress.</p>
+  <section class="hero page-hero section--dark">
+    <div class="hero__bg-word">WORK</div>
+    <div class="container hero__content">
+      <span class="eyebrow">Selected work</span>
+      <h1 class="display page-hero__title">A look at what we make</h1>
+      <p class="lede page-hero__lede">A mix of finished spec work and space held for projects still in progress.</p>
     </div>
-    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="absolute bottom-0 left-0 h-20 w-full" aria-hidden="true">
-      <path d="M0,10 C120,10 140,70 260,72 C340,73 360,20 440,18 C540,15 560,90 680,88" fill="none" stroke="#1D9E75" stroke-width="1.75" opacity="0.9"/>
-      <path d="M680,88 C760,86 780,40 860,42 C960,44 980,95 1100,92 C1220,90 1260,30 1440,34" fill="none" stroke="#1D9E75" stroke-width="1.75" opacity="0.78"/>
-    </svg>
   </section>
 
-  <!-- EDIT ME: once you have real images, add them to an /images folder
-       next to this file, then replace the gradient div above each card's
-       label with: <img src="images/your-file.jpg" class="h-full w-full object-cover" /> -->
-  <section class="bg-sand px-6 py-24">
-    <div class="mx-auto max-w-6xl">
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+  <!-- EDIT ME: once you have real images, add them to /images and replace
+       the div.work-card__media block with an <img> tag pointing to them. -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="work-grid">
         
-        <div class="overflow-hidden rounded-2xl border border-ink/10 bg-white/40">
-          <div class="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-teal to-oak">
-            <span class="font-display text-sm text-sand/60">Image coming soon</span>
-          </div>
-          <div class="p-6">
-            <p class="font-body text-xs uppercase tracking-widest text-moss">Social content + motion</p>
-            <p class="mt-2 font-display text-xl text-ink">Fictional brand spec — Set 1</p>
-            <p class="mt-3 font-body text-sm leading-relaxed text-ink/70">A weekend spec project demonstrating a full social content set alongside a short motion piece for a fictional brand.</p>
-          </div>
+        <div class="work-card">
+          <div class="work-card__media"><span>Image coming soon</span></div>
+          <p class="work-card__tag">Social content + motion</p>
+          <h3 class="work-card__title">Fictional brand spec — Set 1</h3>
+          <p class="work-card__desc">A weekend spec project demonstrating a full social content set alongside a short motion piece for a fictional brand.</p>
         </div>
 
         
-        <div class="overflow-hidden rounded-2xl border border-ink/10 bg-white/40">
-          <div class="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-teal to-oak">
-            <span class="font-display text-sm text-sand/60">Image coming soon</span>
-          </div>
-          <div class="p-6">
-            <p class="font-body text-xs uppercase tracking-widest text-moss">Brand identity</p>
-            <p class="mt-2 font-display text-xl text-ink">Fictional brand spec — Set 2</p>
-            <p class="mt-3 font-body text-sm leading-relaxed text-ink/70">A complete visual identity system built from the ground up for a fictional brand — logo, palette, and guidelines.</p>
-          </div>
+        <div class="work-card">
+          <div class="work-card__media"><span>Image coming soon</span></div>
+          <p class="work-card__tag">Brand identity</p>
+          <h3 class="work-card__title">Fictional brand spec — Set 2</h3>
+          <p class="work-card__desc">A complete visual identity system built from the ground up for a fictional brand — logo, palette, and guidelines.</p>
         </div>
 
         
-        <div class="overflow-hidden rounded-2xl border border-ink/10 bg-white/40">
-          <div class="flex aspect-[4/3] items-center justify-center bg-ink/5">
-            <span class="font-display text-sm text-ink/30">Coming soon</span>
-          </div>
-          <div class="p-6">
-            <p class="font-body text-xs uppercase tracking-widest text-moss">Coming soon</p>
-            <p class="mt-2 font-display text-xl text-ink">New project</p>
-            
-          </div>
+        <div class="work-card">
+          <div class="work-card__media work-card__media--empty"><span>Coming soon</span></div>
+          <p class="work-card__tag">Coming soon</p>
+          <h3 class="work-card__title">New project</h3>
+          
         </div>
 
         
-        <div class="overflow-hidden rounded-2xl border border-ink/10 bg-white/40">
-          <div class="flex aspect-[4/3] items-center justify-center bg-ink/5">
-            <span class="font-display text-sm text-ink/30">Coming soon</span>
-          </div>
-          <div class="p-6">
-            <p class="font-body text-xs uppercase tracking-widest text-moss">Coming soon</p>
-            <p class="mt-2 font-display text-xl text-ink">New project</p>
-            
-          </div>
+        <div class="work-card">
+          <div class="work-card__media work-card__media--empty"><span>Coming soon</span></div>
+          <p class="work-card__tag">Coming soon</p>
+          <h3 class="work-card__title">New project</h3>
+          
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA BAND ===== -->
-  <section class="relative bg-teal px-6 py-24 text-sand">
-    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="absolute -top-1 left-0 h-16 w-full" aria-hidden="true">
-      <path d="M0,60 C120,80 240,40 360,60 C480,80 600,40 720,60 C840,80 960,40 1080,60 C1200,80 1320,40 1440,60" fill="none" stroke="#1D9E75" stroke-width="1.5" opacity="0.55"/>
-    </svg>
-    <div class="mx-auto max-w-6xl text-center">
-      <h2 class="font-display text-3xl leading-tight text-sand md:text-4xl">Ready to build something with roots?</h2>
-      <p class="mx-auto mt-4 max-w-xl font-body text-base text-sand/75">Tell us about your brand and what you need — we'll get back to you with next steps.</p>
-      <a href="start-a-project.html" class="focus-ring mt-8 inline-block rounded-full bg-oasis px-8 py-3 font-body text-sm font-medium text-oak transition hover:bg-sand">Start your project</a>
+  <section class="section section--dark cta-band">
+    <div class="container">
+      <h2 class="display cta-band__title">Ready to build something with roots?</h2>
+      <p class="lede cta-band__lede" style="margin-left:auto;margin-right:auto;">Tell us about your brand and what you need — we'll get back to you with next steps.</p>
+      <a href="start-a-project.html" class="btn btn--solid">Start your project</a>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="bg-oak px-6 py-10 text-sand/60">
-    <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 border-t border-sand/10 pt-8 font-body text-xs md:flex-row md:items-center">
+  <footer class="footer">
+    <div class="container footer__row">
       <span>© 2026 Oaksis Studio. All rights reserved.</span>
-      <div class="flex gap-6">
-        <a href="#" class="focus-ring hover:text-oasis">Instagram</a>
-        <a href="#" class="focus-ring hover:text-oasis">LinkedIn</a>
+      <div class="footer__links">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
       </div>
     </div>
   </footer>
-</main>
 
-<script>
-  document.getElementById('menuBtn').addEventListener('click', function () {
-    document.getElementById('mobileMenu').classList.toggle('hidden');
-    document.getElementById('mobileMenu').classList.toggle('flex');
-  });
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,86 +1,82 @@
-# Oaksis — Plain HTML Site
+# Oaksis — Website
 
-No build step, no Node, no TypeScript. Just HTML files you can open directly
-in a browser and edit like any normal HTML.
+Plain HTML, with real separate CSS and JS files (the way a typical hand-built
+site is structured) — no build step, no Node, no framework.
+
+## File structure
+
+```
+index.html              — homepage
+about.html                — about + team bios
+services.html              — in-depth services
+pricing.html                — pricing (placeholder prices — see below)
+work.html                     — portfolio
+start-a-project.html          — onboarding form + contact
+css/styles.css                 — all styling: design tokens, layout, components
+js/main.js                      — mobile nav toggle + form submit handling
+fonts/                            — put your GC Methane .ttf files here
+images/                             — put real work/photo images here
+```
+
+Every page links the same `css/styles.css` and `js/main.js` — so unlike the
+previous version, there's one shared stylesheet and script, not code repeated
+per page. Changing a color or the nav behavior updates every page from one
+file.
 
 ## View it
 
-Just double-click `index.html` — it opens in your browser. No server needed.
+Double-click `index.html` — opens straight in your browser, no server needed.
 
-Every link between pages (About, Services, Pricing, Work, Start a Project)
-works locally right away.
+## Add your GC Methane font files
 
-## Files
+This site references GC Methane, self-hosted (not from Google Fonts):
 
-```
-index.html            — homepage
-about.html             — about + team bios
-services.html          — in-depth services
-pricing.html           — pricing (has placeholder prices, see below)
-work.html               — portfolio
-start-a-project.html    — onboarding form + contact
-README.md
-```
-
-There's no shared file for the nav/footer — each page has its own copy of
-that HTML. That's normal for a plain multi-page site; it just means if you
-ever change the nav (e.g. add a new page link), you'll want to copy that
-change into each file. Use your editor's "Find in Files" / "Find & Replace
-across files" feature to do that quickly across all 6 at once.
+1. Copy your `.ttf` files into the `fonts` folder, using these exact names
+   (or update the paths in `css/styles.css` under `/* Fonts */` to match
+   whatever you actually have):
+   `GCMethaneDemo-Thin.ttf`, `GCMethaneDemo-ExtraLight.ttf`,
+   `GCMethaneDemo-Light.ttf`, `GCMethaneDemo-Regular.ttf`,
+   `GCMethaneDemo-Medium.ttf`, `GCMethaneDemo-SemiBold.ttf`,
+   `GCMethaneDemo-Bold.ttf`, `GCMethaneDemo-ExtraBold.ttf`
+2. Save, refresh in your browser.
 
 ## Editing content
 
-Open any `.html` file in a text editor (VS Code, Notepad++, even Notepad).
-It's regular HTML with Tailwind CSS utility classes (like `class="text-xl
-text-ink"`) for styling — no build step required, styling updates the moment
-you save and refresh the page in your browser.
+Everything is plain HTML — open any file in a text editor.
 
-- **Colors**: search for `oak`, `moss`, `teal`, `oasis`, `sand`, `ink` — these
-  are custom color names defined once at the top of each file inside the
-  `<script>tailwind.config = {...}</script>` block. To change a color itself
-  (not just where it's used), edit the hex code there.
-- **Team bios**: `about.html` — search for `team-card`, edit the name/role/bio
-  text directly, or copy a whole `team-card` block to add another person
+- **Colors, fonts, spacing, every component's style**: all in `css/styles.css`,
+  under `:root` at the top for the color/font tokens
+- **Copy**: directly in each page's HTML — search for the text you want to
+  change
+- **Team bios**: `about.html` — search for `team-card`
 - **Prices**: `pricing.html` — search for `ADD PRICE`
-- **Contact email**: search for `hello@oaksisstudio.com` in `start-a-project.html`
-- **Social links**: search for `Instagram` / `LinkedIn` near the bottom of
-  each file (footer)
+- **Contact email**: search for `hello@oaksisstudio.com` in
+  `start-a-project.html`
+- **Social links**: bottom of `css` — actually in each page's `<footer>`,
+  search for `Instagram`
 
 ## Set up the project form (Formspree)
 
-The form on `start-a-project.html` needs a Formspree endpoint to actually
-deliver submissions to your inbox:
+1. Create a free account at https://formspree.io
+2. Create a form, copy the ID it gives you
+3. In `start-a-project.html`, find `YOUR_FORM_ID` in the `<form action=...>`
+   line and replace it with your real ID
 
-1. Go to https://formspree.io and create a free account
-2. Create a new form, copy the form ID it gives you (looks like `xzzpqrst`)
-3. Open `start-a-project.html`, find `YOUR_FORM_ID` in the `<form action=...>`
-   line near the top of the form, and replace it with your real ID
-4. Submissions arrive by email — free tier covers 50/month
-
-No JavaScript is needed for the form to work — it's a plain HTML form
-submission.
+The form now submits via JavaScript (`js/main.js`) and shows a thank-you
+message in place, instead of redirecting away from the page.
 
 ## Add real work images
 
-Once you have final images:
-
-1. Create a folder called `images` next to these HTML files
-2. Put your image files in there
-3. In `work.html`, find the comment near the top of the work section — it
-   shows exactly what to replace the placeholder gradient block with
+1. Put image files in `/images`
+2. In `work.html`, find the comment near the top showing exactly what to
+   replace each placeholder `<div class="work-card__media">` block with
 
 ## Push to GitHub / deploy to Vercel
 
-Same as before:
-
 ```bash
-git init
 git add .
-git commit -m "Convert to plain HTML"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<repo-name>.git
-git push -u origin main
+git commit -m "Redesign: separate CSS/JS, editorial layout"
+git push
 ```
 
-Then import the repo at vercel.com/new — Vercel auto-detects plain HTML/static
-sites too, no config needed.
+Vercel auto-redeploys on push — no config needed for a static site like this.
