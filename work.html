@@ -1,116 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta property="og:title" content="Work — Oaksis">
+<meta property="og:description" content="Selected work from Oaksis, an independent creative studio.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
 <title>Work — Oaksis</title>
-<meta name="description" content="Selected work from Oaksis Studio." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%8E%A8</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="work-page.css">
+
 </head>
-<body>
-
-<header class="nav">
-  <div class="nav__bar">
-    <a href="index.html" class="nav__logo">Oaksis</a>
-    <nav class="nav__links">
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="work.html">Work</a>
-      <a href="start-a-project.html" class="nav__cta">Start a project</a>
-    </nav>
-    <button class="nav__toggle" data-nav-toggle aria-expanded="false" aria-label="Toggle menu">
-      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-        <path d="M4 8H22M4 13H22M4 18H22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-      </svg>
-    </button>
-  </div>
-  <nav class="nav__mobile" data-nav-mobile>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="work.html">Work</a>
-    <a href="start-a-project.html" class="nav__cta">Start a project</a>
-  </nav>
-</header>
-
-<main>
-
-  <section class="hero page-hero section--dark">
-    <div class="hero__bg-word">WORK</div>
-    <div class="container hero__content reveal">
-      <span class="eyebrow">Selected work</span>
-      <h1 class="display page-hero__title">A look at what we make</h1>
-      <p class="lede page-hero__lede">A mix of finished spec work and space held for projects still in progress.</p>
-    </div>
-  </section>
-
-  <div class="container">
-    <svg class="root-divider" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C150 10 300 70 450 40 S750 10 900 40 S1150 70 1200 40"></path></svg>
-  </div>
-
-  <!-- EDIT ME: once you have real images, add them to /images and replace
-       the div.work-card__media block with an <img> tag pointing to them. -->
-  <section class="section section--light">
-    <div class="container">
-      <div class="work-grid">
-        
-        <div class="work-card reveal">
-          <div class="work-card__media"><span>Image coming soon</span></div>
-          <p class="work-card__tag">Social content + motion</p>
-          <h3 class="work-card__title">Fictional brand spec — Set 1</h3>
-          <p class="work-card__desc">A weekend spec project demonstrating a full social content set alongside a short motion piece for a fictional brand.</p>
-        </div>
-
-        
-        <div class="work-card reveal">
-          <div class="work-card__media"><span>Image coming soon</span></div>
-          <p class="work-card__tag">Brand identity</p>
-          <h3 class="work-card__title">Fictional brand spec — Set 2</h3>
-          <p class="work-card__desc">A complete visual identity system built from the ground up for a fictional brand — logo, palette, and guidelines.</p>
-        </div>
-
-        
-        <div class="work-card reveal">
-          <div class="work-card__media work-card__media--empty"><span>Coming soon</span></div>
-          <p class="work-card__tag">Coming soon</p>
-          <h3 class="work-card__title">New project</h3>
-          
-        </div>
-
-        
-        <div class="work-card reveal">
-          <div class="work-card__media work-card__media--empty"><span>Coming soon</span></div>
-          <p class="work-card__tag">Coming soon</p>
-          <h3 class="work-card__title">New project</h3>
-          
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--dark cta-band ring-texture">
-    <div class="container reveal">
-      <h2 class="display cta-band__title">Ready to build something with roots?</h2>
-      <p class="lede cta-band__lede" style="margin-left:auto;margin-right:auto;">Tell us about your brand and what you need — we'll get back to you with next steps.</p>
-      <a href="start-a-project.html" class="btn btn--solid">Start your project</a>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container footer__row">
-      <span>© 2026 Oaksis Studio. All rights reserved.</span>
-      <div class="footer__links">
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-      </div>
-    </div>
-  </footer>
-
-<script src="js/main.js"></script>
+<body style="height: 100%; margin: 0">
+<div id="root" style="height: 100%">
+<div id="root" style="height: 100%"><main class="oaksis-shell"><nav class="oaksis-nav "><a class="oaksis-logo " href="index.html"><span class="oaksis-logo-mark" aria-hidden="true"></span>Oaksis</a><div class="oaksis-nav-links"><a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="index.html#pricing">Pricing</a><a href="#work">Work</a><a class="oaksis-nav-cta" href="index.html#start">Start a project</a></div><button class="oaksis-menu" aria-label="Open menu">☰</button></nav><div class="work-page"><section class="work-hero"><div class="work-hero-inner"><div class="oaksis-reveal"><div class="work-kicker"><span></span><span>Selected work / 2021—26</span></div><h1 class="oaksis-display">A moving<br>archive.</h1></div><div class="work-hero-copy oaksis-reveal" style="animation-delay: 0.15s;"><strong>Good work should leave a trace.</strong>We build identities, stories, and digital places for teams doing useful things across Africa and beyond.</div></div><div class="work-wave"><svg class="oaksis-root-line" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80 C95 32 150 132 248 78 S390 27 485 80 S625 135 712 77 C770 36 795 35 839 69 C882 102 908 111 953 76 C1000 39 1030 42 1065 69 C1105 100 1144 101 1200 55" style="stroke: rgb(29, 158, 117);"></path><path d="M0 98 C88 61 144 144 246 94 S392 47 484 98 S625 150 718 94 C778 58 805 52 849 86 C891 117 928 122 966 90 C1011 54 1042 58 1080 86 C1118 113 1158 115 1200 77" style="stroke: rgb(59, 109, 17); opacity: 0.62; animation-delay: 0.35s;"></path></svg></div></section><section class="oaksis-section oaksis-section--light work-intro" id="work"><h2 class="oaksis-display">Not decoration.<br>Direction.</h2><p>Oaksis works with people who are making something real: better food systems, more humane care, rooms worth arriving in, objects with a history. Each project starts with attention and ends with a shape that can keep moving.</p></section><section class="oaksis-section oaksis-section--light archive"><div class="archive-head"><h3>From the archive</h3><span>Scroll to wander</span></div><div class="case-list"><article class="case oaksis-reveal" style="animation-delay: 0s;"><div class="case-art case-art--salt" aria-label="Salt of the Earth visual preview"><div class="art-shape"></div><span class="art-caption">Food systems / Lagos</span><span class="art-word">SAL·T</span></div><div class="case-meta"><span class="case-num">01 / Brand world · Campaign</span><h3 class="oaksis-display">Salt of the Earth</h3><p>A sharper public voice for a Lagos food systems non-profit — from field notes to a campaign people could carry home.</p><div class="case-tags"><span class="case-tag">Brand strategy</span><span class="case-tag">Film direction</span></div><a class="oaksis-button " href="index.html#start">Read the story<span aria-hidden="true">↗</span></a></div></article><article class="case oaksis-reveal" style="animation-delay: 0.08s;"><div class="case-art case-art--mango" aria-label="Mango House visual preview"><div class="art-shape"></div><span class="art-caption">Hospitality / Accra</span><span class="art-word">MANGO</span></div><div class="case-meta"><span class="case-num">02 / Identity · Digital</span><h3 class="oaksis-display">Mango House</h3><p>A warm, confident home for a pan-African hospitality team growing from one beloved stay into a considered collection.</p><div class="case-tags"><span class="case-tag">Visual identity</span><span class="case-tag">Web design</span></div><a class="oaksis-button " href="index.html#start">Read the story<span aria-hidden="true">↗</span></a></div></article><article class="case oaksis-reveal" style="animation-delay: 0.16s;"><div class="case-art case-art--soil" aria-label="Koru Health visual preview"><div class="art-shape"></div><span class="art-caption">Health / Nairobi</span><span class="art-word">KORU</span></div><div class="case-meta"><span class="case-num">03 / Naming · Product story</span><h3 class="oaksis-display">Koru Health</h3><p>A clearer way to explain care. The new story helped a growing health team turn complex services into a simple next step.</p><div class="case-tags"><span class="case-tag">Narrative</span><span class="case-tag">Launch system</span></div><a class="oaksis-button " href="index.html#start">Read the story<span aria-hidden="true">↗</span></a></div></article><article class="case oaksis-reveal" style="animation-delay: 0.24s;"><div class="case-art case-art--paper" aria-label="Tide &amp; Timber visual preview"><div class="art-shape"></div><span class="art-caption">Objects / Dakar</span><span class="art-word">TIDE</span></div><div class="case-meta"><span class="case-num">04 / Strategy · E-commerce</span><h3 class="oaksis-display">Tide &amp; Timber</h3><p>A living archive for objects made slowly in West Africa, giving a small studio the confidence to sell beyond its first circle.</p><div class="case-tags"><span class="case-tag">Commerce</span><span class="case-tag">Art direction</span></div><a class="oaksis-button " href="index.html#start">Read the story<span aria-hidden="true">↗</span></a></div></article></div></section><section class="oaksis-section next"><div class="next-grid"><div><span class="oaksis-eyebrow">The next chapter</span><h2 class="oaksis-display">What are you growing?</h2></div><div><p>Bring the early idea, the tangled middle, or the thing that is almost ready. We will find the root and give it room.</p><a class="oaksis-button oaksis-button--fill" href="index.html#start">Start a project<span aria-hidden="true">↗</span></a></div></div><div class="next-ripple"><svg class="oaksis-root-line" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80 C95 32 150 132 248 78 S390 27 485 80 S625 135 712 77 C770 36 795 35 839 69 C882 102 908 111 953 76 C1000 39 1030 42 1065 69 C1105 100 1144 101 1200 55" style="stroke: rgb(59, 109, 17);"></path><path d="M0 98 C88 61 144 144 246 94 S392 47 484 98 S625 150 718 94 C778 58 805 52 849 86 C891 117 928 122 966 90 C1011 54 1042 58 1080 86 C1118 113 1158 115 1200 77" style="stroke: rgb(8, 80, 65); opacity: 0.62; animation-delay: 0.35s;"></path></svg></div></section></div><footer class="oaksis-footer"><div><h3>Oaksis</h3><p>A solo creative studio for brands that want roots<br>deep enough to hold their shape, and water enough to move.</p></div><div><p>Explore</p><a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="index.html#pricing">Pricing</a><a href="#work">Work</a></div><div><p>Start a conversation</p><a href="mailto:hello@oaksis.studio">hello@oaksis.studio</a><a href="index.html#start">Lagos · Remote worldwide</a></div><div class="oaksis-footer-bottom"><span>© 2026 Oaksis Studio</span><span>Built with steadiness + movement</span></div></footer></main></div>
+</div>
+<script src="script.js" defer></script>
 </body>
 </html>

@@ -1,143 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta property="og:title" content="About — Oaksis">
+<meta property="og:description" content="A solo creative studio for brands that want roots deep enough to hold their shape, and water enough to move.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
 <title>About — Oaksis</title>
-<meta name="description" content="The studio behind Oaksis and how it works." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%8E%A8</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="about-page.css">
+
 </head>
-<body>
-
-<header class="nav">
-  <div class="nav__bar">
-    <a href="index.html" class="nav__logo">Oaksis</a>
-    <nav class="nav__links">
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="work.html">Work</a>
-      <a href="start-a-project.html" class="nav__cta">Start a project</a>
-    </nav>
-    <button class="nav__toggle" data-nav-toggle aria-expanded="false" aria-label="Toggle menu">
-      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-        <path d="M4 8H22M4 13H22M4 18H22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-      </svg>
-    </button>
-  </div>
-  <nav class="nav__mobile" data-nav-mobile>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="work.html">Work</a>
-    <a href="start-a-project.html" class="nav__cta">Start a project</a>
-  </nav>
-</header>
-
-<main>
-
-  <section class="hero page-hero section--dark">
-    <div class="hero__bg-word">OAKSIS</div>
-    <div class="container hero__content reveal">
-      <span class="eyebrow">About Oaksis</span>
-      <h1 class="display page-hero__title">Named for two things that shouldn't blend, but do.</h1>
-      <p class="lede page-hero__lede">An oak's steadiness. An oasis's adaptability. That tension is the whole brief — for every client, and for the studio itself.</p>
-    </div>
-  </section>
-
-  <div class="container">
-    <svg class="root-divider" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C150 10 300 70 450 40 S750 10 900 40 S1150 70 1200 40"></path></svg>
-  </div>
-
-  <section class="section section--light">
-    <div class="container reveal">
-      <p class="display" style="font-size:clamp(1.5rem,3vw,2.25rem);" class="max-w-prose-lg">Oaksis is a solo creative studio, built and led by one designer from first sketch to final file.</p>
-      <p class="lede mt-lg max-w-prose-lg body-muted">That's deliberate. It means every client works directly with the person doing the work — no account layer, no brief getting reinterpreted three times before it reaches a designer. Just one consistent creative point of view, applied to your brand as carefully as it would be to our own.</p>
-      <p class="lede mt-lg max-w-prose-lg body-muted">The studio works across brand identity, motion, social content, and presentation design — for SMEs, corporates, and NGOs who need work that holds together across every format it's asked to show up in.</p>
-    </div>
-  </section>
-
-  <section class="section section--teal ring-texture">
-    <div class="container">
-      <span class="eyebrow reveal">How we work</span>
-      <div class="numbered-list">
-        <div class="numbered-item reveal">
-          <span class="numbered-item__num">01</span>
-          <div class="numbered-item__body">
-            <h3 class="numbered-item__title">Rooted</h3>
-            <p class="numbered-item__desc">Every project starts from a clear strategic foundation — not a template, not a trend chase.</p>
-          </div>
-        </div>
-        <div class="numbered-item reveal">
-          <span class="numbered-item__num">02</span>
-          <div class="numbered-item__body">
-            <h3 class="numbered-item__title">Adaptive</h3>
-            <p class="numbered-item__desc">One identity, applied consistently across whatever format the moment calls for.</p>
-          </div>
-        </div>
-        <div class="numbered-item reveal">
-          <span class="numbered-item__num">03</span>
-          <div class="numbered-item__body">
-            <h3 class="numbered-item__title">Direct</h3>
-            <p class="numbered-item__desc">One creative lead means one consistent point of view, from first sketch to final file — no handoffs, no dilution.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDIT ME: replace bracketed placeholders with real bios. To add more
-       team members, copy one .team-card block and paste it after the last. -->
-  <section class="section section--light">
-    <div class="container">
-      <span class="eyebrow reveal">Who's behind it</span>
-      <h2 class="display reveal">Meet the team</h2>
-      <div class="team-grid">
-        <div class="team-card reveal">
-          <div class="team-card__photo"></div>
-          <div>
-            <h3 class="team-card__name">Doubra</h3>
-            <p class="team-card__role">Founder & Creative Lead</p>
-            <p class="team-card__bio">[Add your bio here — background, what you do, what drives your creative approach.]</p>
-          </div>
-        </div>
-        <div class="team-card reveal">
-          <div class="team-card__photo"></div>
-          <div>
-            <h3 class="team-card__name">[Team member name]</h3>
-            <p class="team-card__role">[Role]</p>
-            <p class="team-card__bio">[Add their bio here.]</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--light text-center" style="padding-top:0;">
-    <a href="work.html" class="text-link">See the work →</a>
-  </section>
-
-  <section class="section section--dark cta-band ring-texture">
-    <div class="container reveal">
-      <h2 class="display cta-band__title">Ready to build something with roots?</h2>
-      <p class="lede cta-band__lede" style="margin-left:auto;margin-right:auto;">Tell us about your brand and what you need — we'll get back to you with next steps.</p>
-      <a href="start-a-project.html" class="btn btn--solid">Start your project</a>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container footer__row">
-      <span>© 2026 Oaksis Studio. All rights reserved.</span>
-      <div class="footer__links">
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-      </div>
-    </div>
-  </footer>
-
-<script src="js/main.js"></script>
+<body style="height: 100%; margin: 0">
+<div id="root" style="height: 100%">
+<div id="root" style="height: 100%"><main class="oaksis-shell"><nav class="oaksis-nav oaksis-nav--light"><a class="oaksis-logo oaksis-nav--light" href="index.html"><span class="oaksis-logo-mark" aria-hidden="true"></span>Oaksis</a><div class="oaksis-nav-links"><a href="#about">About</a><a href="index.html#services">Services</a><a href="index.html#pricing">Pricing</a><a href="index.html#work">Work</a><a class="oaksis-nav-cta" href="#start">Start a project</a></div><button class="oaksis-menu" aria-label="Open menu">☰</button></nav><header class="about-hero"><div class="oaksis-reveal"><div class="oaksis-eyebrow">About the studio · Lagos / everywhere</div><h1 class="oaksis-display">Rooted, not rigid.</h1><p class="oaksis-copy">Oaksis is a small creative studio for people building something with a long view. We help brands find a shape that can stand still, stretch, and keep its character.</p><div style="margin-top: 34px;"><a class="oaksis-button oaksis-button--fill" href="#start">Meet the studio<span aria-hidden="true">↗</span></a></div></div><div class="about-hero-art oaksis-reveal" style="animation-delay: 0.16s;"><div class="about-stamp">STEADY<br>MEETS<br>ADAPTABLE</div></div></header><div class="about-page-line"><svg class="oaksis-root-line" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80 C95 32 150 132 248 78 S390 27 485 80 S625 135 712 77 C770 36 795 35 839 69 C882 102 908 111 953 76 C1000 39 1030 42 1065 69 C1105 100 1144 101 1200 55" style="stroke: rgb(29, 158, 117);"></path><path d="M0 98 C88 61 144 144 246 94 S392 47 484 98 S625 150 718 94 C778 58 805 52 849 86 C891 117 928 122 966 90 C1011 54 1042 58 1080 86 C1118 113 1158 115 1200 77" style="stroke: rgb(59, 109, 17); opacity: 0.62; animation-delay: 0.35s;"></path></svg></div><section id="about" class="oaksis-section oaksis-section--light"><div class="about-intro"><div><div class="oaksis-eyebrow">The name</div><h2 class="oaksis-display">Oak + oasis.</h2></div><div class="about-intro-copy"><p>Oak gives us the first half: strength, patience, a root system you can’t see but can feel. Oasis gives us the second: relief, generosity, a place where new things have room to grow.</p><p>Put them together and you get our point of view: steadiness meets adaptability. The best identity is not a monument. It is a living structure with enough backbone to be recognised and enough air to respond.</p><div class="about-pullquote">“We make the kind of work that gets clearer with use.”</div></div></div></section><section class="oaksis-section oaksis-section--dark"><div class="about-story"><div class="about-story-art oaksis-ring-texture"><strong>OAKSIS / 2020—</strong><p>A studio shaped by West African light, long walks, and useful conversations.</p></div><div><div class="oaksis-eyebrow">A grounded beginning</div><h2 class="oaksis-display">Small on purpose.</h2><p class="oaksis-copy">Oaksis began in a Lagos apartment with a notebook, a borrowed monitor, and a simple frustration: too many brands were being made to perform instead of communicate.</p><p class="oaksis-copy">We stayed small so the work could stay close. Today, we work with founders, cultural organisations, and thoughtful teams across Nigeria and remotely worldwide. No layers between the question and the person solving it.</p></div></div></section><section class="oaksis-section oaksis-section--light about-context"><div><div class="oaksis-eyebrow">Our context</div><h2 class="oaksis-display">Made in Nigeria.<br>Open to the world.</h2></div><div><p>We are shaped by a place where a plan must be clear enough to survive a power cut, flexible enough for a changed road, and human enough to bring people along.</p><p>That means we value practical beauty. Systems that work on a phone. Language that sounds like a person. Ideas with a little weather on them.</p></div></section><section class="oaksis-section oaksis-section--teal"><div class="about-team"><div><div class="oaksis-eyebrow">The people</div><h2 class="oaksis-display">A core team,<br>a wide circle.</h2><p class="oaksis-copy">A solo-led studio with trusted collaborators brought in when the work calls for a different hand.</p></div><div class="about-bios"><div class="about-bio"><div class="about-avatar" style="background: var(--oak);">AM</div><div><h3>Amina Okafor</h3><p style="color: var(--teal);">Founder · Brand strategist</p><p>A Lagos-based strategist who turns good questions into clear, durable directions. Amina leads every engagement from first conversation to final handover.</p></div></div><div class="about-bio"><div class="about-avatar" style="background: var(--moss);">TK</div><div><h3>Tomiwa Kuti</h3><p style="color: var(--teal);">Design partner · Visual systems</p><p>A multidisciplinary designer working between Lagos and London. Tomiwa brings rhythm, restraint, and the occasional very good green.</p></div></div><div class="about-bio"><div class="about-avatar" style="background: var(--oak);">NS</div><div><h3>Nneka Sanni</h3><p style="color: var(--teal);">Writing partner · Voice &amp; story</p><p>Nneka writes the words people remember: warm, exact, and never louder than the work needs to be.</p></div></div></div></div></section><section class="oaksis-section oaksis-section--dark"><div class="about-values"><div><div class="oaksis-eyebrow">What we hold</div><h2 class="oaksis-display">Our values<br>have roots.</h2></div><div class="about-rings"><div class="oaksis-ring-row" style="border-color: rgb(29, 158, 117); animation-delay: 0ms;"><div class="oaksis-ring-index">01</div><div>Clarity before decoration</div></div><div class="oaksis-ring-row" style="border-color: rgb(59, 109, 17); animation-delay: 120ms;"><div class="oaksis-ring-index">02</div><div>Useful over impressive</div></div><div class="oaksis-ring-row" style="border-color: rgb(29, 158, 117); animation-delay: 240ms;"><div class="oaksis-ring-index">03</div><div>Care is a competitive edge</div></div><div class="oaksis-ring-row" style="border-color: rgb(59, 109, 17); animation-delay: 360ms;"><div class="oaksis-ring-index">04</div><div>Leave room for change</div></div></div></div></section><section id="start" class="about-invite"><div class="oaksis-eyebrow">A good place to begin</div><h2 class="oaksis-display">Have something worth growing?</h2><p>Bring the rough version, the half-formed question, or the thing that has been sitting in your notes for six months.</p><a class="oaksis-button oaksis-button--fill" href="#start">Start a conversation<span aria-hidden="true">↗</span></a></section><footer class="oaksis-footer"><div><h3>Oaksis</h3><p>A solo creative studio for brands that want roots<br>deep enough to hold their shape, and water enough to move.</p></div><div><p>Explore</p><a href="#about">About</a><a href="index.html#services">Services</a><a href="index.html#pricing">Pricing</a><a href="index.html#work">Work</a></div><div><p>Start a conversation</p><a href="mailto:hello@oaksis.studio">hello@oaksis.studio</a><a href="#start">Lagos · Remote worldwide</a></div><div class="oaksis-footer-bottom"><span>© 2026 Oaksis Studio</span><span>Built with steadiness + movement</span></div></footer></main></div>
+</div>
+<script src="script.js" defer></script>
 </body>
 </html>
