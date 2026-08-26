@@ -9,6 +9,320 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<style>
+/* ─── Start-a-project page styles ─────────────────────────────────────────── */
+/* Color mapping from reference:
+   reference --teal-deep  → our --teal   (#085041)
+   reference --teal       → our --oasis  (#1D9E75)  */
+
+/* ── Hero ── */
+.start-hero {
+  position: relative;
+  min-height: 710px;
+  padding: 160px max(36px, calc((100vw - 1108px) / 2)) 0;
+  background: var(--oak);
+  color: var(--sand);
+  overflow: hidden;
+}
+.start-hero-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1108px;
+  margin: auto;
+}
+.start-hero-copy {
+  position: relative;
+  z-index: 1;
+}
+.start-hero h1 {
+  font-size: clamp(56px, 8.5vw, 118px);
+  margin: 24px 0 30px;
+  color: var(--sand);
+}
+.start-hero h1 em {
+  font-style: normal;
+  color: var(--oasis);
+}
+.start-lede {
+  max-width: 490px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(234, 243, 222, 0.83);
+}
+.start-meta {
+  margin-top: 55px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: rgba(234, 243, 222, 0.58);
+}
+/* Orbit graphic */
+.start-orbit {
+  width: 380px;
+  height: 380px;
+  border: 1px solid rgba(29, 158, 117, 0.46);
+  border-radius: 50%;
+  position: relative;
+  margin: 20px 6vw 0 30px;
+  flex-shrink: 0;
+  animation: orbit-float 6s ease-in-out infinite;
+}
+.start-orbit::before,
+.start-orbit::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(59, 109, 17, 0.6);
+  border-radius: 50%;
+  inset: 38px;
+  transform: rotate(28deg) scaleX(0.62);
+}
+.start-orbit::after {
+  inset: 82px;
+  transform: rotate(-40deg) scaleX(0.8);
+  border-color: rgba(29, 158, 117, 0.65);
+}
+.start-orbit-core {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  background: var(--oasis);
+  border-radius: 50%;
+  left: calc(50% - 36px);
+  top: calc(50% - 36px);
+  box-shadow: 0 0 0 18px rgba(29, 158, 117, 0.12);
+}
+.orbit-label {
+  position: absolute;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: rgba(234, 243, 222, 0.58);
+}
+.orbit-label--top  { top: 32px;    left: 110px; }
+.orbit-label--bottom { bottom: 37px; right: 68px; }
+@keyframes orbit-float {
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+/* Root-line SVG inside hero */
+.start-hero .oaksis-root-line {
+  margin-top: 45px;
+  height: 125px;
+}
+
+/* ── Form section ── */
+.start-form-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(500px, 1.28fr);
+  gap: 110px;
+  padding: 140px max(36px, calc((100vw - 1108px) / 2));
+  background: var(--sand);
+  color: var(--ink);
+}
+.start-form-intro h2 {
+  font-size: clamp(50px, 6vw, 82px);
+  margin: 24px 0 30px;
+  color: var(--oak);
+}
+.start-form-intro h2 em {
+  font-style: normal;
+  color: var(--oasis);
+}
+.fit-note {
+  display: flex;
+  gap: 15px;
+  margin-top: 60px;
+  max-width: 350px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(23, 52, 4, 0.25);
+}
+.fit-note-mark {
+  font-size: 27px;
+  color: var(--oasis);
+  line-height: 1;
+}
+.fit-note strong { font-size: 12px; color: var(--oak); }
+.fit-note p      { font-size: 12px; line-height: 1.65; margin: 9px 0 0; opacity: 0.68; }
+.start-email {
+  display: inline-flex;
+  gap: 16px;
+  margin-top: 58px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--moss);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--teal);
+}
+.start-email span { transition: transform 0.2s; }
+.start-email:hover span { transform: translate(4px, -4px); }
+/* Form wrapper */
+.form-wrap { min-width: 0; }
+.start-form {
+  padding: 34px 0 0;
+  border-top: 2px solid var(--oak);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 34px;
+}
+.start-form label {
+  display: block;
+  color: var(--oak);
+  font-size: 12px;
+  font-weight: 600;
+}
+.start-form label > span {
+  display: block;
+  margin-bottom: 13px;
+  color: var(--oasis);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+.start-form input,
+.start-form select,
+.start-form textarea {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(23, 52, 4, 0.34);
+  border-radius: 0;
+  padding: 0 0 13px;
+  margin-top: 11px;
+  background: transparent;
+  color: var(--ink);
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+.start-form textarea { resize: vertical; line-height: 1.55; }
+.start-form input:focus,
+.start-form select:focus,
+.start-form textarea:focus { border-color: var(--oasis); }
+.start-form input::placeholder,
+.start-form textarea::placeholder { color: rgba(44, 44, 42, 0.4); }
+.brief-field { margin-top: 8px; }
+.form-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 42px;
+}
+.form-foot p {
+  max-width: 200px;
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.55;
+  opacity: 0.55;
+}
+.submit-button {
+  border: 1px solid var(--oasis);
+  background: var(--oasis);
+  color: var(--oak);
+  padding: 15px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, transform 0.25s;
+}
+.submit-button span { margin-left: 28px; }
+.submit-button:hover {
+  background: var(--oak);
+  color: var(--sand);
+  transform: translateY(-2px);
+}
+
+/* ── Closing section ── */
+.start-close {
+  padding: 125px max(36px, calc((100vw - 1108px) / 2));
+  background-color: var(--teal);
+  color: var(--sand);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: end;
+  background-image: repeating-radial-gradient(
+      circle at 50% 50%,
+      rgba(234, 243, 222, 0.045) 0 1px,
+      transparent 1px 24px
+    ),
+    linear-gradient(140deg, rgba(59, 109, 17, 0.22), transparent 45%);
+}
+.start-close h2 {
+  font-size: clamp(52px, 7vw, 92px);
+  margin: 25px 0 0;
+}
+.start-close h2 em {
+  font-style: normal;
+  color: var(--oasis);
+}
+.close-rings {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.oaksis-ring-row {
+  display: grid;
+  grid-template-columns: 47px 1fr;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid;
+  padding: 14px 0;
+  font-size: 13px;
+}
+.oaksis-ring-index {
+  font-family: var(--font-display);
+  font-size: 23px;
+  color: var(--oasis);
+}
+.start-close > .oaksis-button {
+  justify-self: start;
+  margin-top: 30px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 720px) {
+  .start-hero {
+    min-height: 760px;
+    padding: 130px 22px 0;
+  }
+  .start-hero-inner { display: block; }
+  .start-hero h1 { font-size: clamp(55px, 16vw, 82px); }
+  .start-lede { font-size: 15px; }
+  .start-meta { margin-top: 35px; }
+  .start-orbit {
+    width: 245px;
+    height: 245px;
+    margin: 58px auto 0;
+  }
+  .start-orbit-core {
+    width: 48px;
+    height: 48px;
+    left: calc(50% - 24px);
+    top: calc(50% - 24px);
+  }
+  .start-orbit::before { inset: 25px; }
+  .start-orbit::after  { inset: 52px; }
+  .start-form-section {
+    display: block;
+    padding: 90px 22px;
+  }
+  .start-form-intro h2 { font-size: 55px; }
+  .fit-note     { margin-top: 42px; }
+  .start-email  { margin-top: 38px; }
+  .form-wrap    { margin-top: 80px; }
+  .form-row     { display: block; margin: 0; }
+  .form-row label { margin-bottom: 30px; }
+  .form-foot    { display: block; }
+  .submit-button { margin-top: 22px; }
+  .start-close {
+    display: block;
+    padding: 90px 22px;
+  }
+  .close-rings { margin-top: 55px; }
+  .start-close > .oaksis-button { margin-top: 35px; }
+}
+</style>
 </head>
 <body>
 <div id="root" style="height: 100%">
@@ -26,73 +340,133 @@
   <button aria-label="Open menu" class="oaksis-menu">☰</button>
 </nav>
 
-<header class="start-hero">
-  <div class="oaksis-reveal">
-    <div class="oaksis-eyebrow">Start a project</div>
-    <h1 class="oaksis-display">Let's build something with roots.</h1>
-    <p class="oaksis-copy">Fill in a few details below, or reach out directly — either way, a real person reads every message.</p>
+<!-- ── Hero ──────────────────────────────────────────────────────────────── -->
+<section class="start-hero">
+  <div class="start-hero-inner">
+    <div class="start-hero-copy oaksis-reveal">
+      <p class="oaksis-eyebrow">Start a project / 01</p>
+      <h1 class="oaksis-display">Bring us the<br><em>early thought.</em></h1>
+      <p class="start-lede">The half-formed idea. The stubborn question. The thing your brand needs to become before it can be understood.</p>
+      <p class="start-meta">A remote studio rooted in Lagos<br>Working across places, time zones, and good questions.</p>
+    </div>
+    <div class="start-orbit" aria-hidden="true">
+      <div class="start-orbit-core"></div>
+      <span class="orbit-label orbit-label--top">your starting point</span>
+      <span class="orbit-label orbit-label--bottom">a wider ripple</span>
+    </div>
   </div>
-</header>
-
-<div class="about-page-line">
-  <svg aria-hidden="true" class="oaksis-root-line" preserveaspectratio="none" viewbox="0 0 1200 150">
+  <svg class="oaksis-root-line" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true">
     <path d="M0 80 C95 32 150 132 248 78 S390 27 485 80 S625 135 712 77 C770 36 795 35 839 69 C882 102 908 111 953 76 C1000 39 1030 42 1065 69 C1105 100 1144 101 1200 55" style="stroke: rgb(29, 158, 117);"></path>
     <path d="M0 98 C88 61 144 144 246 94 S392 47 484 98 S625 150 718 94 C778 58 805 52 849 86 C891 117 928 122 966 90 C1011 54 1042 58 1080 86 C1118 113 1158 115 1200 77" style="stroke: rgb(59, 109, 17); opacity: 0.62; animation-delay: 0.35s;"></path>
   </svg>
-</div>
+</section>
 
-<section class="oaksis-section oaksis-section--light">
-  <div style="max-width: 720px;">
+<!-- ── Form section ───────────────────────────────────────────────────────── -->
+<section class="start-form-section" id="start">
+  <div class="start-form-intro">
+    <p class="oaksis-eyebrow">A considered first step / 02</p>
+    <h2 class="oaksis-display">Tell us what<br><em>you're growing.</em></h2>
+    <p class="oaksis-copy">There is no perfect brief required here. Give us enough to feel the shape of the opportunity, and we'll come back with a thoughtful point of view.</p>
+    <div class="fit-note">
+      <span class="fit-note-mark">+</span>
+      <div>
+        <strong>Good fit usually looks like</strong>
+        <p>A team with something real at stake, room for candour, and the patience to make the right thing properly.</p>
+      </div>
+    </div>
+    <a class="start-email" href="mailto:hello@oaksis.studio">hello@oaksis.studio <span>↗</span></a>
+  </div>
+
+  <div class="form-wrap">
     <!-- EDIT ME: replace YOUR_FORM_ID with your real Formspree form ID -->
-    <form class="project-form oaksis-reveal" data-project-form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <div class="form-field">
-        <label for="name">Your name</label>
-        <input id="name" name="name" type="text" required>
+    <form class="start-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <label>
+          <span>01</span>Your name
+          <input name="name" required placeholder="Ada Okafor">
+        </label>
+        <label>
+          <span>02</span>Email address
+          <input name="email" required type="email" placeholder="you@organisation.com">
+        </label>
       </div>
-      <div class="form-field">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required>
+      <div class="form-row">
+        <label>
+          <span>03</span>Organisation
+          <input name="organisation" required placeholder="The name people know you by">
+        </label>
+        <label>
+          <span>04</span>Project type
+          <select name="project_type" required>
+            <option value="">Choose a direction</option>
+            <option>Brand identity</option>
+            <option>Digital experience</option>
+            <option>Campaign or launch</option>
+            <option>Something in between</option>
+          </select>
+        </label>
       </div>
-      <div class="form-field">
-        <label for="tier">What are you looking for?</label>
-        <select id="tier" name="tier">
-          <option>The Seed — Brand Foundation</option>
-          <option>The Grove — Applied Creative</option>
-          <option>The Canopy — Ongoing Partnership</option>
-          <option>Not sure — let's talk</option>
-        </select>
+      <div class="form-row">
+        <label>
+          <span>05</span>Budget range
+          <select name="budget" required>
+            <option value="">A useful estimate</option>
+            <option>₦1m — ₦3m</option>
+            <option>₦3m — ₦7m</option>
+            <option>₦7m — ₦15m</option>
+            <option>Let's discuss the scope</option>
+          </select>
+        </label>
+        <label>
+          <span>06</span>Timeline
+          <select name="timeline" required>
+            <option value="">When do you need it?</option>
+            <option>In the next 4–6 weeks</option>
+            <option>In 2–3 months</option>
+            <option>This quarter</option>
+            <option>We're still finding the pace</option>
+          </select>
+        </label>
       </div>
-      <div class="form-field">
-        <label for="budget">Rough budget</label>
-        <select id="budget" name="budget">
-          <option>Not sure yet</option>
-          <option>Under &#8358;300,000</option>
-          <option>&#8358;300,000 – &#8358;800,000</option>
-          <option>&#8358;800,000+</option>
-        </select>
-      </div>
-      <div class="form-field form-field--full">
-        <label for="details">Tell us about your brand and what you need</label>
-        <textarea id="details" name="details" rows="5" required></textarea>
-      </div>
-      <div class="form-field form-field--full form-actions">
-        <button type="submit" class="oaksis-button oaksis-button--fill">Send project details<span aria-hidden="true">↗</span></button>
+      <label class="brief-field">
+        <span>07</span>What should we know?
+        <textarea name="brief" required rows="5" placeholder="What are you trying to make possible?"></textarea>
+      </label>
+      <div class="form-foot">
+        <p>We keep your information private and never add it to a list.</p>
+        <button class="submit-button" type="submit">Begin the conversation <span>↗</span></button>
       </div>
     </form>
-    <p data-form-status hidden class="form-status"></p>
-
-    <div class="contact-card oaksis-reveal" style="animation-delay: 0.15s;">
-      <h3>Prefer to talk directly?</h3>
-      <p style="margin-top: 10px; opacity: 0.75;">Email us and we'll pick it up from there.</p>
-      <a href="mailto:hello@oaksisstudio.com" class="detail-link" style="margin-top: 20px;">hello@oaksisstudio.com</a>
-    </div>
   </div>
 </section>
 
+<!-- ── Closing section ────────────────────────────────────────────────────── -->
+<section class="start-close">
+  <div class="close-copy">
+    <p class="oaksis-eyebrow">Root to ripple / 04</p>
+    <h2 class="oaksis-display">Small beginnings<br><em>travel far.</em></h2>
+  </div>
+  <div class="close-rings">
+    <div class="oaksis-ring-row" style="border-color: rgb(29, 158, 117);">
+      <div class="oaksis-ring-index">01</div>
+      <div>A clear first conversation.</div>
+    </div>
+    <div class="oaksis-ring-row" style="border-color: rgb(59, 109, 17);">
+      <div class="oaksis-ring-index">02</div>
+      <div>A shared point of view.</div>
+    </div>
+    <div class="oaksis-ring-row" style="border-color: rgb(29, 158, 117);">
+      <div class="oaksis-ring-index">03</div>
+      <div>Work with somewhere to go.</div>
+    </div>
+  </div>
+  <a class="oaksis-button oaksis-button--fill" href="work.html">See the work we make <span aria-hidden="true">↗</span></a>
+</section>
+
 <footer class="oaksis-footer">
-  <div><h3>Oaksis</h3><p>A solo creative studio for brands that want roots<br/>deep enough to hold their shape, and water enough to move.</p></div>
+  <div><h3>Oaksis</h3><p>A solo creative studio for brands that want roots<br>deep enough to hold their shape, and water enough to move.</p></div>
   <div><p>Explore</p><a href="about.html">About</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="work.html">Work</a></div>
-  <div><p>Start a conversation</p><a href="mailto:hello@oaksisstudio.com">hello@oaksisstudio.com</a><a href="start-a-project.html">Remote · Worldwide</a></div>
+  <div><p>Start a conversation</p><a href="mailto:hello@oaksis.studio">hello@oaksis.studio</a><a href="start-a-project.html">Lagos · Remote worldwide</a></div>
   <div class="oaksis-footer-bottom"><span>© 2026 Oaksis Studio</span><span>Built with steadiness + movement</span></div>
 </footer>
 
