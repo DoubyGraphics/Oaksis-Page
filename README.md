@@ -1,82 +1,44 @@
-# Oaksis — Website
+# Oaksis — Homepage (Replit design, integrated)
 
-Plain HTML, with real separate CSS and JS files (the way a typical hand-built
-site is structured) — no build step, no Node, no framework.
+This is your Replit-designed homepage, fully ported into working HTML/CSS/JS
+— including real interactivity that the Replit preview alone doesn't give
+you (it strips JavaScript when saved), rebuilt from scratch here:
 
-## File structure
+- **Ripple canvas** — a real cursor-reactive water ripple effect in the hero
+  (canvas-based, in `js/main.js`)
+- **Scroll-triggered reveals** — sections and the root-line drawings now
+  animate in as you scroll to them, instead of playing once on page load
+- **Mobile menu** — working open/close toggle
 
-```
-index.html              — homepage
-about.html                — about + team bios
-services.html              — in-depth services
-pricing.html                — pricing (placeholder prices — see below)
-work.html                     — portfolio
-start-a-project.html          — onboarding form + contact
-css/styles.css                 — all styling: design tokens, layout, components
-js/main.js                      — mobile nav toggle + form submit handling
-fonts/                            — put your GC Methane .ttf files here
-images/                             — put real work/photo images here
-```
+## What was fixed from the Replit output
 
-Every page links the same `css/styles.css` and `js/main.js` — so unlike the
-previous version, there's one shared stylesheet and script, not code repeated
-per page. Changing a color or the nav behavior updates every page from one
-file.
+Replit's design tool invented some business details as placeholder content.
+Fixed here, but double check these are right for you:
+
+- **Location**: changed "Lagos / remote" → "Remote, worldwide" (update to
+  your real location if you want it stated)
+- **Prices**: fabricated ₦480k / ₦1.8m replaced with `[ADD PRICE]`
+  placeholders — search `ADD PRICE` in `index.html`
+- **Work section**: the fictional "coastal conservation collective" case
+  study was replaced with a generic placeholder marked `SPEC PROJECT 01` —
+  search for `EDIT ME` in `index.html` to find and replace it with your real
+  spec project
+
+## New copy adopted from Replit
+
+The three service tiers are now named **The Seed / The Grove / The Canopy**
+(previously Brand Foundation / Applied Creative / Ongoing Partnership), with
+new taglines throughout. This carries through once the other pages are
+built too, so naming stays consistent.
 
 ## View it
 
-Double-click `index.html` — opens straight in your browser, no server needed.
+Copy your GC Methane `.ttf` files into `fonts/` (same filenames as before),
+then double-click `index.html`.
 
-## Add your GC Methane font files
+## Structure
 
-This site references GC Methane, self-hosted (not from Google Fonts):
-
-1. Copy your `.ttf` files into the `fonts` folder, using these exact names
-   (or update the paths in `css/styles.css` under `/* Fonts */` to match
-   whatever you actually have):
-   `GCMethaneDemo-Thin.ttf`, `GCMethaneDemo-ExtraLight.ttf`,
-   `GCMethaneDemo-Light.ttf`, `GCMethaneDemo-Regular.ttf`,
-   `GCMethaneDemo-Medium.ttf`, `GCMethaneDemo-SemiBold.ttf`,
-   `GCMethaneDemo-Bold.ttf`, `GCMethaneDemo-ExtraBold.ttf`
-2. Save, refresh in your browser.
-
-## Editing content
-
-Everything is plain HTML — open any file in a text editor.
-
-- **Colors, fonts, spacing, every component's style**: all in `css/styles.css`,
-  under `:root` at the top for the color/font tokens
-- **Copy**: directly in each page's HTML — search for the text you want to
-  change
-- **Team bios**: `about.html` — search for `team-card`
-- **Prices**: `pricing.html` — search for `ADD PRICE`
-- **Contact email**: search for `hello@oaksisstudio.com` in
-  `start-a-project.html`
-- **Social links**: bottom of `css` — actually in each page's `<footer>`,
-  search for `Instagram`
-
-## Set up the project form (Formspree)
-
-1. Create a free account at https://formspree.io
-2. Create a form, copy the ID it gives you
-3. In `start-a-project.html`, find `YOUR_FORM_ID` in the `<form action=...>`
-   line and replace it with your real ID
-
-The form now submits via JavaScript (`js/main.js`) and shows a thank-you
-message in place, instead of redirecting away from the page.
-
-## Add real work images
-
-1. Put image files in `/images`
-2. In `work.html`, find the comment near the top showing exactly what to
-   replace each placeholder `<div class="work-card__media">` block with
-
-## Push to GitHub / deploy to Vercel
-
-```bash
-git add .
-git commit -m "Redesign: separate CSS/JS, editorial layout"
-git push
-```
-
-Vercel auto-redeploys on push — no config needed for a static site like this.
+Same pattern as before — `css/styles.css` (one shared stylesheet) and
+`js/main.js` (one shared script). This is currently just the homepage;
+about/services/pricing/work/start-a-project still need the same treatment
+once you've reviewed this one.
