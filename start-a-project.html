@@ -34,10 +34,17 @@
   </div>
 </header>
 
+<div class="about-page-line">
+  <svg aria-hidden="true" class="oaksis-root-line" preserveaspectratio="none" viewbox="0 0 1200 150">
+    <path d="M0 80 C95 32 150 132 248 78 S390 27 485 80 S625 135 712 77 C770 36 795 35 839 69 C882 102 908 111 953 76 C1000 39 1030 42 1065 69 C1105 100 1144 101 1200 55" style="stroke: rgb(29, 158, 117);"></path>
+    <path d="M0 98 C88 61 144 144 246 94 S392 47 484 98 S625 150 718 94 C778 58 805 52 849 86 C891 117 928 122 966 90 C1011 54 1042 58 1080 86 C1118 113 1158 115 1200 77" style="stroke: rgb(59, 109, 17); opacity: 0.62; animation-delay: 0.35s;"></path>
+  </svg>
+</div>
+
 <section class="oaksis-section oaksis-section--light">
   <div style="max-width: 720px;">
     <!-- EDIT ME: replace YOUR_FORM_ID with your real Formspree form ID -->
-    <form class="project-form" data-project-form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form class="project-form oaksis-reveal" data-project-form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <div class="form-field">
         <label for="name">Your name</label>
         <input id="name" name="name" type="text" required>
@@ -74,7 +81,7 @@
     </form>
     <p data-form-status hidden class="form-status"></p>
 
-    <div class="contact-card">
+    <div class="contact-card oaksis-reveal" style="animation-delay: 0.15s;">
       <h3>Prefer to talk directly?</h3>
       <p style="margin-top: 10px; opacity: 0.75;">Email us and we'll pick it up from there.</p>
       <a href="mailto:hello@oaksisstudio.com" class="detail-link" style="margin-top: 20px;">hello@oaksisstudio.com</a>
