@@ -29,6 +29,29 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .oaksis-root-line path { animation-play-state: paused; }
 .oaksis-reveal.is-visible .oaksis-root-line path,
 .is-visible .oaksis-root-line path { animation-play-state: running; }
+/* Scroll reveal (.reveal): content fades + slides up into view on scroll.
+   The .is-visible class is added once by the IntersectionObserver in main.js. */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect prefers-reduced-motion: show content immediately, no animation */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
 
 @charset "utf-8";
 

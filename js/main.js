@@ -29,6 +29,29 @@ document.addEventListener('DOMContentLoaded', function () {
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  /* ---- Scroll reveal (.reveal): fade + slide up on scroll ---- */
+  var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var scrollRevealEls = document.querySelectorAll('.reveal');
+  if (prefersReducedMotion) {
+    // Reduced motion: skip the animation entirely, show content normally
+    scrollRevealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  } else if ('IntersectionObserver' in window && scrollRevealEls.length) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target); // fire only once per element
+        }
+      });
+    }, { threshold: 0.15 });
+    scrollRevealEls.forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    // Fallback: no IntersectionObserver support — just show everything
+    scrollRevealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+
+
   // Root-line SVG draw-in and section entrance also gated by scroll —
   // reveal any ancestor section as visible too, so root-lines inside
   // non-.oaksis-reveal sections still animate when scrolled to.
